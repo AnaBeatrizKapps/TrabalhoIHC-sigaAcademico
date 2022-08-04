@@ -55,7 +55,7 @@ export default function TrancarDisciplina({ navigation }) {
                         <Text style={styles.modalText}>Trancar a disciplina: <B>Interacao Humano-Computador</B></Text>
                         <Pressable
                             style={[styles.button, styles.buttonClose]}
-                            onPress={() => setModalVisible(!modalVisible)}
+                            onPress={() => {setModalVisible(!modalVisible); handleClick();}}
                         >
                             <Text style={styles.textStyle}>Confirmar</Text>
                         </Pressable>
@@ -72,7 +72,13 @@ export default function TrancarDisciplina({ navigation }) {
             <ScrollView>
 
                 <View style={styles.box}>
-                    <Pressable style={styles.boxButtons} onPress={() => setModalVisible(true)}>
+                    <Pressable style={{
+                        width: '100%',
+                        height: 90,
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        backgroundColor: isActive ? 'red' : '#a8bbe2'
+                        }} onPress={() => setModalVisible(true)}>
                         <View style={styles.boxIntern}>
                             <View style={styles.gapBoxs}>
                                 <Text style={styles.textNotas}>Interacao Humano-Computador</Text>
@@ -82,7 +88,13 @@ export default function TrancarDisciplina({ navigation }) {
                 </View>
 
                 <View style={styles.box}>
-                    <TouchableOpacity style={styles.boxButtons}>
+                    <TouchableOpacity style={{
+                        width: '100%',
+                        height: 90,
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        backgroundColor: '#a8bbe2'
+                        }}>
                         <View style={styles.boxIntern}>
                             <View style={styles.gapBoxs}>
                                 <Text style={styles.textNotas}>Calculo 3</Text>
@@ -92,7 +104,13 @@ export default function TrancarDisciplina({ navigation }) {
                 </View>
 
                 <View style={styles.box}>
-                    <TouchableOpacity style={styles.boxButtons}>
+                    <TouchableOpacity style={{
+                        width: '100%',
+                        height: 90,
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        backgroundColor: '#a8bbe2'
+                        }}>
                         <View style={styles.boxIntern}>
                             <View style={styles.gapBoxs}>
                                 <Text style={styles.textNotas}>Pesquisa Operacional</Text>
@@ -102,7 +120,13 @@ export default function TrancarDisciplina({ navigation }) {
                 </View>
 
                 <View style={styles.box}>
-                    <TouchableOpacity style={styles.boxButtons}>
+                    <TouchableOpacity style={{
+                        width: '100%',
+                        height: 90,
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        backgroundColor: '#a8bbe2'
+                        }}>
                         <View style={styles.boxIntern}>
                             <View style={styles.gapBoxs}>
                                 <Text style={styles.textNotas}>Teoria dos Grafos</Text>
@@ -112,7 +136,13 @@ export default function TrancarDisciplina({ navigation }) {
                 </View>
 
                 <View style={styles.box}>
-                    <TouchableOpacity style={styles.boxButtons}>
+                    <TouchableOpacity style={{
+                        width: '100%',
+                        height: 90,
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        backgroundColor: '#a8bbe2'
+                        }}>
                         <View style={styles.boxIntern}>
                             <View style={styles.gapBoxs}>
                                 <Text style={styles.textNotas}>Estrutura de dados 2</Text>
@@ -147,13 +177,6 @@ const styles = StyleSheet.create({
         fontSize: 20,
         color: "#FFF",
         textAlign: "center"
-    },
-    boxButtons: {
-        backgroundColor: '#a8bbe2',
-        width: '100%',
-        height: 90,
-        justifyContent: 'center',
-        alignItems: 'center'
     },
     boxIntern: {
         flexDirection: 'row',
