@@ -16,7 +16,13 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 export default function TrancarDisciplina({ navigation }) {
     const [modalVisible, setModalVisible] = useState(false);
 
-    const B = (props) => <Text style={{ fontWeight: 'bold',color: 'red' }}>{props.children}</Text>
+    const [isActive, setIsActive] = useState(false);
+
+    const handleClick = () => {
+        setIsActive(current => !current);
+    };
+
+    const B = (props) => <Text style={{ fontWeight: 'bold', color: 'red' }}>{props.children}</Text>
 
     const voltar = (navigation) => {
         navigation.reset({
